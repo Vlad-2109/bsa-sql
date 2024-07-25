@@ -40,7 +40,8 @@ CREATE TABLE country (
 
 CREATE TABLE director (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -181,9 +182,9 @@ INSERT INTO country (name) VALUES
 ('USA'),
 ('UK');
 
-INSERT INTO director (name) VALUES
-('Steven Spielberg'),
-('Christopher Nolan');
+INSERT INTO director (first_name, last_name) VALUES
+('Steven', 'Spielberg'),
+('Christopher', 'Nolan');
 
 INSERT INTO person (first_name, last_name, biography, date_of_birth, gender, country_id, primary_photo_id) VALUES
 ('Leonardo', 'DiCaprio', 'Famous actor.', '1974-11-11', 'male', 1, NULL),
