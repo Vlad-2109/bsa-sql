@@ -95,7 +95,8 @@
 
         DIRECTOR {
             INT id PK
-            VARCHAR(255) name
+            VARCHAR(255) first_name
+            VARCHAR(255) last_name
             TIMESTAMP created_at
             TIMESTAMP updated_at
         }
